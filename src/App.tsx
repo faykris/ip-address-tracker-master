@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import SearchField from './SearchField/SearchField';
+import Map from './MyMap/MyMap';
+import { useSelector } from 'react-redux';
+import { RootState }  from './redux/store';
+import Footer from './Footer/Footer';
 
 function App() {
+  const [lat, setLat] = useState(0)
+  const [lng, setLng] = useState(0)
+  const state = useSelector((state: RootState) => state)
+
+  // eslint-disable-next-line
+  useEffect(() => {
+    setLat(state.lat)
+    setLng(state.lng)
+  });
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>IP Address Tracker</h2>
+        <SearchField />
       </header>
-    </div>
+      <Map lat={lat} lng={lng} />
+      <Footer />
+    </div>   
   );
 }
 

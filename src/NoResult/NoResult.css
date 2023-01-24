@@ -1,0 +1,24 @@
+.NoResult {
+	margin: 2rem 0;
+    margin-left: auto;
+    margin-right: auto; 
+	max-width: 1100px; 
+}
+
+.NoResult .row {
+	border-radius: 17px;
+	background-color: #fff;
+	box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.07);
+	width: 100%;
+	padding: 1rem 2rem;
+	text-align: center;
+	border-radius: 17px;
+	min-height: 8rem;
+	position: relative;
+	color: #c33;
+}
+
+.NoResult .row h4 {
+	color: hsl(0, 0%, 17%);
+	margin-top: 1.2rem;
+}

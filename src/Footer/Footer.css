@@ -1,0 +1,27 @@
+.Footer {
+	height: 10rem;
+	width: 100%;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.attribution {
+	text-align: center;
+}
+
+.attribution .challenge, .attribution .coded{
+	margin: 1rem;
+}
+
+.attribution .challenge a {
+	text-decoration: none;
+	color: aqua;
+}
+
+.attribution .coded a {
+	text-decoration: none;
+	color: yellow;
+}
