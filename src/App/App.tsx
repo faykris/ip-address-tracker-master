@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import SearchField from './SearchField/SearchField';
-import Map from './MyMap/MyMap';
+import SearchField from '../SearchField/SearchField';
+import Map from '../MyMap/MyMap';
 import { useSelector } from 'react-redux';
-import { RootState }  from './redux/store';
-import Footer from './Footer/Footer';
+import { RootState }  from '../redux/store';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [lat, setLat] = useState(0)
