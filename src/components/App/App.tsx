@@ -3,10 +3,10 @@ import './App.css';
 import SearchField from '../SearchField/SearchField';
 import Map from '../MyMap/MyMap';
 import { useSelector } from 'react-redux';
-import { RootState }  from '../redux/store';
+import { RootState }  from '../../redux/store';
 import Footer from '../Footer/Footer';
 
-function App() {
+const App = () => {
   const [lat, setLat] = useState(0)
   const [lng, setLng] = useState(0)
   const state = useSelector((state: RootState) => state)
@@ -16,7 +16,6 @@ function App() {
     setLat(state.lat)
     setLng(state.lng)
   });
-
 
   return (
     <div className="App">
@@ -28,6 +27,6 @@ function App() {
       <Footer />
     </div>   
   );
-}
+};
 
 export default App;

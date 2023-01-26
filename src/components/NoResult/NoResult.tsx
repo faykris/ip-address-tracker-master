@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './NoResult.css'
 
-function NoResult() {
+const NoResult = () => {;
   return (
 	<div className='NoResult'>
 		<div className='row'>
@@ -11,6 +11,6 @@ function NoResult() {
 		</div>
 	</div>
   )
-}
+};
 
-export default NoResult
+export default NoResult;

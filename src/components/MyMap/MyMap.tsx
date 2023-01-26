@@ -1,11 +1,16 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import './MyMap.css'
+import './MyMap.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
 import L, { LatLngExpression } from 'leaflet';
-import IconLocation from '../img/icon-location.svg'
+import IconLocation from '../../images/icon-location.svg';
+
+interface MapProps {
+  lat: number,
+  lng: number
+}
 
 const icon = new L.Icon({
   iconUrl: IconLocation,  // path of icon file
@@ -14,12 +19,7 @@ const icon = new L.Icon({
   iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
   shadowAnchor: [4, 62],  // the same for the shadow
   popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-})
-
-interface MapProps {
-  lat: number,
-  lng: number
-}
+});
 
 const MyMap: React.FC<MapProps> = ({ lat, lng }) => {
  

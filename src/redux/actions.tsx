@@ -1,4 +1,5 @@
 import { createAction } from '@reduxjs/toolkit'
+import {RootState} from "./store";
 
 interface AddIP {
 	type: 'AddIP',
@@ -6,12 +7,12 @@ interface AddIP {
 }
 
 // eslint-disable-next-line
-const AddIP = createAction('AddIP', function prepare(data: any) {
+const AddIP = createAction('AddIP', function prepare(data: RootState) {
 	return {
 		payload: data
 	}
-})
+});
 
-export type IPActions = AddIP 
+export type IPActions = AddIP;
 
-export { AddIP }
+export { AddIP };

@@ -1,5 +1,5 @@
-import React from 'react'
-import './ResultRow.css'
+import React from 'react';
+import './ResultRow.css';
 
 interface ResultProps {
   IPAddress: string,
@@ -9,8 +9,8 @@ interface ResultProps {
 }
 
 const ResultRow: React.FC<ResultProps> = ({
-  IPAddress, location, timezone, isp
-}) => {
+    IPAddress, location, timezone, isp
+  }) => {
   return (
 	<div className='ResultRow'>
 		<div className='row'>
@@ -33,6 +33,6 @@ const ResultRow: React.FC<ResultProps> = ({
 		</div>
 	</div>
   )
-}
+};
 
-export default ResultRow
+export default ResultRow;

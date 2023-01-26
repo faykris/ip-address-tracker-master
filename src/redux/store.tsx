@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { IPActions } from './actions'
+import { configureStore } from '@reduxjs/toolkit';
+import { IPActions } from './actions';
 
 export interface RootState {
   ip: string,
@@ -17,18 +17,17 @@ const initialState: RootState = {
   isp: 'Southern California Edison',
   lat: 34.04915,
   lng: -118.09462
-}
+};
 
 const store = configureStore({
   reducer: (state = initialState, action: IPActions) => {
     switch (action.type) {
       case 'AddIP':
-        console.log('action:', action.payload)
-        return action.payload
+        return action.payload;
       default:
-        return state
+        return state;
     }
   }
-})
+});
 
-export default store
+export default store;
